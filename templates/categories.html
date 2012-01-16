@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}{{ SITENAME }} <small>[categories]</small>{% endblock %}
+{% block content %}
+<section id="content" class="body">    
+    <article>
+        <h3>Categories:</h3>
+        <ul id="categories" class="no-bullet">
+        {% for category, articles in categories %}
+            <li><a href="{{ SITEURL }}/category/{{ category }}.html">{{ category }}</a></li>
+        {% endfor %}
+        </ul>
+    </article>
+</section>
+{% endblock %}
